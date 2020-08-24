@@ -1,0 +1,320 @@
+@import"../../template/top/top.wxss";
+
+.picker {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.sendimage image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.homebody {
+  width: 750rpx;
+  white-space: nowrap;
+  background-color: rgba(1, 2, 3, 0.05);
+}
+
+.swiperview {
+  width: 100%;
+  border-bottom: 2rpx solid red;
+  height: 330rpx;
+}
+
+.swiper {
+  width: 90%;
+  margin-top: 20rpx;
+  margin-left: 5%;
+  height: 300rpx;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 300rpx;
+
+}
+
+.scroll-label {
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 2rpx solid rgba(1, 2, 3, 0.207);
+}
+
+.scrollview {
+  width: 690rpx;
+}
+
+.labels {
+  margin-left: 30rpx;
+  height: 100rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+
+}
+
+.label {
+  width: auto;
+  height: 95rpx;
+  line-height: 100rpx;
+
+}
+
+/* 消息卡片样式 */
+.card {
+  margin-top: 25rpx;
+  width: 750rpx;
+
+  background-color: white;
+}
+
+.message_user {
+  height: 130rpx;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.user_headurl {
+  width: 130rpx;
+  height: 130rpx;
+
+}
+
+.user_headurl image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 35rpx;
+  margin-left: 25rpx;
+  border-radius: 100%;
+}
+
+.user_name {
+  height: 50rpx;
+  overflow: hidden;
+  line-height: 50rpx;
+  margin-top: 35rpx;
+  font-size: 35rpx;
+}
+
+.user_school {
+  height: 30rpx;
+  color: rgba(1, 2, 3, 0.5);
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.school {
+  margin-left: 50rpx;
+}
+
+.message_label {
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 25rpx;
+
+}
+
+.label_content {
+  margin-left: 10rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 30rpx;
+  line-height: 40rpx;
+  font-size: 35rpx;
+  border: 2rpx solid rgba(1, 2, 3, 0.207);
+
+}
+
+
+
+.message_content {
+  
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  word-break: keep-all;
+  white-space: pre-line;
+  word-break: break-all;
+
+}
+
+
+
+.message_image {
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+.imgview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+.message_function {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+
+}
+
+.message_del {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.message_support {
+  margin-right: 30rpx;
+}
+
+.message_support image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.comment{
+  display: flex;
+  flex-direction:row;
+  margin-top:30rpx;
+  width: 750rpx;
+ 
+}
+.comment_headurl{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10rpx;
+}
+.comment_headurl image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+  border-radius: 100%;
+}
+.comment_right{
+  width: 615rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2rpx solid  rgba(1, 2, 3, 0.207);
+}
+.commenthead{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 640rpx;
+}
+
+.comment_nickname{
+  height: 40rpx;
+  width: 300rpx;
+  overflow: hidden;
+  line-height: 40rpx;
+  margin-top: 15rpx;
+  font-size: 30rpx;
+}
+.comment_support{
+  height: 40rpx;
+  width: 40rpx;
+  margin-top: 15rpx;
+  margin-right: 25rpx;
+}
+.comment_support image{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.comment_content{
+
+  
+  word-break: keep-all;
+  white-space: pre-line;
+  word-break: break-all;
+}
+.comment_bottom{
+  display: flex;
+  flex-direction: row;
+}
+
+.comment_time{
+  width: 200rpx;
+}
+.bottom{
+  width: 100%;
+  text-align: center;
+}
+
+.inputtextview{
+  display: flex;
+  flex-direction: row;
+  margin-left: 25rpx;
+  margin-top:30rpx;
+  margin-right: 25rpx;
+  border-radius: 10rpx;
+  border:2rpx solid rgba(1, 2, 3, 0.207);
+}
+
+.textarea{
+  padding-left: 15rpx;
+  width: 630rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.inputtextview image{
+  margin-top: 5rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+.inputtextview1{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  bottom: 0;
+  background-color: white;
+  z-index:999;
+}
+.textareainput{
+  border-radius: 10rpx;
+  border:2rpx solid rgba(1, 2, 3, 0.207);
+  background-color: white;
+  padding-left: 15rpx;
+  width: 550rpx;
+  min-height:60rpx;
+  line-height: 60rpx;
+  
+  
+}
+
+.sendbutton{
+  margin-left: 20rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  padding-left: 25rpx;
+  align-items: center;
+  background-color: cadetblue;
+}

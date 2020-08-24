@@ -1,0 +1,155 @@
+.body {
+  width: 750rpx;
+  white-space: nowrap;
+}
+.head {
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  background: rgba(1, 2, 3, 0.207);
+}
+
+.headinform {
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom:2rpx solid rgba(0, 0, 0, 0.207);
+}
+/* 头像 */
+.headimg {
+  width: 175rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgurl {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 100%;
+  border: 2rpx solid white;
+  
+  
+  
+}
+
+.imgurl image {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 100%;
+}
+/* 个人信息 */
+.informdetail {
+  width: 550rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nickname {
+ 
+  display: flex;
+  flex-direction: row;
+  
+}
+.name{
+  width:300rpx;
+  margin-top:10rpx;
+  font-size: 40rpx;
+  font-weight:600;
+  white-space:nowrap;/* 强制在同一行内显示所有文本,直到文本结束或者遭遇\n对象。不换行 */
+  overflow: hidden;
+  /* text-overflow:ellipsis; */
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.sex{
+  margin-top:25rpx;
+  margin-left: 30rpx;
+  font-size:30rpx;
+  
+}
+
+.schoolinform { 
+  margin-top:20rpx;
+  font-size:30rpx;
+  width:500rpx;
+  display: flex;
+  flex-direction: row;
+  
+}
+.fontbox{
+  height:40rpx;
+  line-height:40rpx;
+  
+  
+}
+
+.fontbox view {
+  border-radius:20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  border:2rpx solid #000000;
+  white-space:nowrap;/* 强制在同一行内显示所有文本,直到文本结束或者遭遇\n对象。不换行 */
+  overflow: hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.fontbox2 view {
+  border-radius:20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  width:360rpx;
+  border:2rpx solid #000000;
+  white-space:nowrap;/* 强制在同一行内显示所有文本,直到文本结束或者遭遇\n对象。不换行 */
+  overflow: hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.fontbox1{
+  margin-left:10rpx;
+  width:100rpx;
+  height:40rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  border-radius:20rpx;
+  border:2rpx solid #000000;
+  line-height:40rpx;
+}
+
+.headtaber {
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  height:100rpx;
+}
+.taber{
+  text-align:center;
+}
+
+.subject{
+  margin-top:20rpx;
+  padding-left:30rpx;
+  padding-right:20rpx;
+  
+}
+
+.personone{
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  border-bottom:2rpx solid rgba(0, 0, 0, 0.207);
+  line-height:100rpx;
+  font-size:40rpx;
+  
+}     
+
+.personone image{
+  width:40rpx;
+  height:40rpx;
+}

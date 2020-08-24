@@ -1,0 +1,60 @@
+<!--pages/index/person/persondetail/persondetail.wxml-->
+<scroll-view class="persondetail">
+	<view class="infotitle">个人</view>
+	<view class="infoone">
+		<view class="persononetitle">头像</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone">
+		<view class="persononetitle">昵称</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone1">
+		<view class="persononetitle">性别</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infotitle">绑定</view>
+	<view class="infoone">
+		<view class="persononetitle">电话</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone1">
+		<view class="persononetitle">qq</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infotitle">学校</view>
+	<view class="infoone">
+		<view class="persononetitle">学校</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone">
+		<view class="persononetitle">校区</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone">
+		<view class="persononetitle">年级</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+	<view class="infoone1">
+		<view class="persononetitle">学院</view>
+		<view>
+			<image src="../../../../icons/rightarrow.png"></image>
+		</view>
+	</view>
+</scroll-view>

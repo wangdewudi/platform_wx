@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/person/person",
+    "pages/index/home/home",
+    "pages/index/person/persondetail/persondetail",
+    "pages/index/release/release",
+    "pages/index/messagedetail/messagedetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "玩创平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#e0aadf",
+    "color": "#00aadf",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/home/home",
+        "iconPath": "icons/index_2.png",
+        "selectedIconPath": "icons/index_2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/release/release",
+        "iconPath": "icons/index_2.png",
+        "selectedIconPath": "icons/index_2.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/index/person/person",
+        "iconPath": "icons/index_2.png",
+        "selectedIconPath": "icons/index_2.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

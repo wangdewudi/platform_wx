@@ -1,0 +1,10 @@
+<!-- <import src="../../template/top/top.wxml"/>
+<template is="top" data="{{name:topdata.name,top:topdata.top,height:topdata.height,right:topdata.right}}"/> -->
+<template name="top">
+
+<view class='topnavigation' style="margin-top:{{top}}px;height:{{height}}px; line-height:{{height}}px;">
+ <view></view>
+ <view class="name"> {{name}} </view>
+ <view></view>
+</view>
+</template>

@@ -1,0 +1,96 @@
+/* pages/index/release/release.wxss */
+.releasebody{
+  width: 750rpx;
+  white-space: nowrap;
+}
+
+.picker{
+padding-top: 12.5rpx;
+width: 100%;
+height: 75rpx;
+border-bottom: 2rpx solid rgba(1, 2, 3, 0.207);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.picker image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.delete-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.picker view{
+padding-left: 15rpx ;
+
+padding-right:  15rpx;
+}
+
+.inputtext{
+  width: 750rpx;
+  height: 400rpx;
+  margin-top: 15rpx;
+}
+.textareas{
+  width: 720rpx;
+  height: 400rpx;
+  margin-left: 15rpx;
+}
+
+.photocss{
+  width: 750rpx;
+  display:flex;
+  flex-direction: row;  
+  flex-wrap:wrap;           
+}
+.photoone{
+  width: 230rpx;
+  height: 230rpx;
+  margin-top: 15rpx;
+  margin-left:15rpx;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.photoone_pre{
+  width: 230rpx;
+  height: 230rpx;
+  margin-top: 15rpx;
+  margin-left:15rpx;
+  position:relative;
+}
+.alphoto{
+  width: 230rpx;
+  height: 230rpx;
+}
+.photoadd{
+  width: 230rpx;
+  text-align: center;
+}
+.preview{
+
+  width: 100rpx;
+  height: 100rpx;
+
+}
+#prephoto{
+  background-color:  rgba(1, 2, 3, 0.05);
+}
+
+.one{
+  height: 30rpx;
+  width: 750rpx;
+  border-bottom: 2rpx solid rgba(1, 2, 3, 0.207);     
+}
+
+.label{
+  width: min-content; 
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-radius: 30rpx;
+  border:2rpx solid  rgba(1, 2, 3, 0.207);
+}

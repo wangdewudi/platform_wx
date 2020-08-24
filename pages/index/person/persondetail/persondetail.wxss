@@ -1,0 +1,27 @@
+/* pages/index/person/persondetail/persondetail.wxss */
+.persondetail {
+  width: 750rpx;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.infotitle{
+  height: 75rpx;
+}
+.infoone{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoone1{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

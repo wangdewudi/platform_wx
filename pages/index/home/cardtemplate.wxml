@@ -1,0 +1,82 @@
+<view class="card"  >
+	<view class="message_user">
+		<view class="user_headurl">
+			<image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKeMg2Ugl0E1XjAwPsUDCEZWAPpwt9FpjAJQia6mWrtaNsiadTXHjtFV2UzZ0Hh2Hv90bnwgzY1XSCQ/132"></image>
+		</view>
+		<view class="user_detail">
+			<view class="user_name">{{item.msg.resuser.user.nickname}}</view>
+			<view class="user_school">
+				<view class="message_time">1个小时前</view>
+				<view class="school">{{item.msg.resuser.school.school}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="message_label" bindtap="todetail" data-msg="{{item}}">
+		<view wx:for="{{item.msg.labellist}}" wx:key="is" wx:for-item="it" class="label_content">#{{it.label}}</view>
+	</view>
+	<view class="message_content" wx:if="{{item.msg.messageContent.detail!=null}}" bindtap="todetail" data-msg="{{item}}">
+		<block wx:if="{{item.detail==null}}">
+			{{item.msg.messageContent.detail}}
+		</block>
+		<block wx:elif="{{item.detail!=null&&item.hiddentext==false}}">
+			{{item.msg.messageContent.detail}}<text bindtap="textchange"style="color:blue;" data-index="{{item.msg.message.msgId}}">...收起</text>
+		</block>
+		<block wx:elif="{{item.detail!=null&&item.hiddentext==true}}">
+			{{item.detail}}<text bindtap="textchange"style="color:blue;" data-index="{{item.msg.message.msgId}}">...展开</text>
+		</block>
+	</view>
+	<view class="message_image" bindtap="todetail" data-msg="{{item}}">
+		<block wx:if="{{item.num==1}}">
+			<view wx:for="{{item.msg.filelist}}" wx:key="is" wx:for-item="it" class="imgview">
+				<image mode="center" src="{{it.url}}" style="width:{{item.width}}rpx;" class="images"></image>
+			</view>
+		</block>
+		<block wx:else>
+			<view class="imgview" wx:for="{{item.msg.filelist}}" wx:key="is" wx:for-item="it">
+				<image mode="center" src="{{it.url}}" style="height:{{(700-10*(item.num-1))/item.num}}rpx;width:{{(700-10*(item.num-1))/item.num}}rpx;" class="images"></image>
+			</view>
+		</block>
+	</view>
+	<view class="message_function">
+		<view class="message_browse">浏览{{item.msg.message.numberBrowse}} </view>
+		<view class="message_del">
+			<view class="message_support">
+				<image src="../../../icons/support_no.png"></image>
+			</view>
+			<view class="message_support">
+				<image src="../../../icons/comment.png"></image>
+			</view>
+			<view class="message_support">
+				<image src="../../../icons/forward.png"></image>
+			</view>
+		</view>
+	</view>
+	<view style="border-top: 2rpx solid rgba(1, 2, 3, 0.207);" wx:if="{{item.msg.finalComments!=null}}">
+	<view class="comment_title">评论</view>
+		<view class="comment" wx:for="{{item.msg.finalComments}}" wx:key="is" wx:for-item="it">
+			<view class="comment_headurl">
+				<image src="{{it.headurl}}"></image>
+			</view>
+			<view class="comment_right">
+				<view class="commenthead">
+					<view class="comment_nickname">{{it.nickname}}</view>
+					<view class="comment_support">
+						<image src="../../../icons/support_no.png"></image>
+					</view>
+				</view >
+				<view class="comment_content" data-message="{{it}}" bindtap="showcommentinput">{{it.comment.content}}</view>
+				<view class="comment_bottom">
+					<view class="comment_time">1小时前</view>
+					<view class="reply" data-message="{{it}}" bindtap="showcommentinput">回复</view>
+				</view>
+			</view>
+		</view>
+		<view class="comment_more" wx:if="{{item.msg.finalComments.length<item.msg.message.numberComment}}"> 查看更多评论</view>
+	</view>
+	<view id="{{item.msg.message.msgId}}" class="inputtextview" data-message="{{item.msg.message}}" bindtap="showcommentinput">
+		<view class="textarea">评论</view>
+		<image src="../../../icons/send.png"></image>
+	</view>
+
+	<view style="height:30rpx;"></view>
+</view>

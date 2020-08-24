@@ -1,0 +1,53 @@
+<!--pages/index/release/release.wxml-->
+<scroll-view class="releasebody">
+ <view class="sendrange">
+          <picker bindchange="rangeChange" value="{{index}}" range="{{sendranges}}">
+    <view class="picker">
+   <view>{{sendranges[index]}}</view> 
+     <view class="sendimage"><image src="../../../icons/down.png"></image></view>
+    </view>
+   
+  </picker>
+            
+  </view>
+  <view class="inputtext">
+    <textarea class="textareas" value="{{messagetext}}" bindblur="textinput" maxlength="500" placeholder="请输入帖子内容">
+    </textarea>
+  </view>
+  <view class="photocss">
+   
+   <view  class="photoone_pre"  wx:for="{{image}}"   wx:for-item="item" wx:key="this" >
+      <image wx:if="{{item.type=='photo'}}" class="alphoto" src="{{item.url}}" data-index="{{index}}" 
+      mode="aspectFill" bindtap="previewImg" >
+      <icon type='cancel' class="delete-btn" data-index="{{item}}" catchtap="deletefile"></icon> </image>
+      <video wx:else  class="alphoto"  id="prewvideo" 
+        muted="{{voice}}"
+        play-btn-position="center"
+        objectFit="cover"
+        custom-cache="{{false}}"
+        src="{{item.url}}">
+          <icon type='cancel' class="delete-btn" data-index="{{item}}" catchtap="deletefile"></icon> 
+          </video>
+
+    </view>
+    <view  class="photoone"  wx:if="{{image.length<9}}" bindtap="choose" id="prephoto"> 
+    <view class="photoadd" ><image class="preview" src="../../../icons/photo.png"></image> </view>
+      <view class="photoadd" > 照片/视频</view>
+    </view>
+   
+  </view>
+  <view class="one"></view>
+  <view class="photocss">
+  <block wx:for="{{defaultlabel}}" wx:key="this" wx:for-item="item">
+    <view wx:if="{{item.check==0}}"  id="label"  class="label" >
+    <text bindtap="labelbutton" data-label="{{item}}">#{{item.content}}</text>
+    </view>
+    <view wx:else id="label" style=" background:rgba(1, 2, 3, 0.207);"  class="label" >
+    <text bindtap="labelbutton" data-label="{{item}}">#{{item.content}}</text>
+    </view>
+  </block>
+  </view>
+  <view class="button"> 
+  <button class="submit" bindtap="submit">上传</button>
+  </view>
+</scroll-view>

@@ -1,0 +1,75 @@
+<scroll-view class="body">
+    <view class="head"> 
+     <view class="headinform" wx:if="{{!hasUserInfo && canIUse}}" >
+            <view class="headimg" > 
+                <button class="imgurl" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                    <image  src="../../../icons/index_2.png"></image>
+                </button>
+            </view>
+            <view class="informdetail">
+                <view class="nickname"> 
+                    <view class="name">请先登录</view>
+                   
+                </view>
+                
+            </view>
+        </view>
+        <view class="headinform" wx:else  bindtap="topersondetail">
+            <view class="headimg" > 
+                <view class="imgurl" >
+                    <image  src="{{person.user.headurl}}"></image>
+                </view>
+            </view>
+            <view class="informdetail">
+                <view class="nickname"> 
+                    <view class="name">{{person.user.nickname}}</view>
+                    <view class="sex">
+                        <block wx:if="{{person.user.sex==1}}">男</block>
+                        <block wx:elif="{{person.user.sex==2}}">女</block>
+                        <block wx:elif="{{person.user.sex==0}}">未知</block>
+                    </view>
+                </view>
+                <view class="schoolinform" wx:if="{{person.school!=''&&person.school.school!=null}}">
+                    <view class="fontbox"><view> {{person.school.school}} </view></view>
+                    <view wx:if="{{person.campus!=null}}" class="fontbox1">{{person.campus.campus}}</view>
+                </view>
+                <view class="schoolinform" wx:else>
+                    <view class="fontbox"><view> 请选择学校 </view></view>
+                  
+                </view>
+            </view>
+        </view>
+        <view class="headtaber">
+            <view class="taber">
+                <view class="tabernumber">23</view>
+                <view class="tabertitle">发帖</view>  
+            </view>
+            <view class="taber">
+                <view class="tabernumber">15</view>
+                <view class="tabertitle">回复</view>  
+            </view>
+            <view class="taber">
+                <view class="tabernumber">78</view>
+                <view class="tabertitle">点赞</view>  
+            </view>
+        </view>
+    </view>
+    <view class="subject">
+        <view class="personone">
+            <view class="persononetitle">最近浏览</view> 
+            <view><image src="../../../icons/rightarrow.png"></image></view>
+        </view>
+         <view class="personone">
+            <view class="persononetitle">帮助中心</view> 
+            <view><image src="../../../icons/rightarrow.png"></image></view>
+        </view>
+         <view class="personone">
+            <view class="persononetitle">意见反馈</view> 
+            <view><image src="../../../icons/rightarrow.png"></image></view>
+        </view>
+         <view class="personone">
+            <view class="persononetitle">关于万创校园</view> 
+            <view><image src="../../../icons/rightarrow.png"></image></view>
+        </view>
+    </view>
+</scroll-view>

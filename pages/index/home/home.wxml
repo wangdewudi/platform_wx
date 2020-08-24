@@ -1,0 +1,71 @@
+<view class='topnavigation' style="padding-top:{{topdata.top}}px;height:{{topdata.height}}px; line-height:{{topdata.height}}px;">
+	<picker bindchange="rangeChange" value="{{index}}" range="{{sendranges}}">
+		<view style="margin-left:{{topdata.right}}px;" class="picker">
+			<view>{{sendranges[index]}}</view>
+			<view class="sendimage">
+				<image src="../../../icons/down.png"></image>
+			</view>
+		</view>
+	</picker>
+	<view class="name" style="top:{{topdata.top}}px;"> {{topdata.name}} </view>
+	<view></view>
+</view>
+<view>
+	<scroll-view animation="{{animationscroll}}" class="homebody" style="margin-top:{{topdata.top+topdata.height}}px; " >
+		<view class="swiperview">
+			<swiper class="swiper">
+				<block wx:for="{{swiperdata}}" wx:key="this" wx:for-item="item">
+					<swiper-item>
+						<image src="{{item.src}}" class="swiper-image"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class="scroll-label">
+			<scroll-view scroll-x class="scrollview">
+				<view class="labels" wx:for="{{defaultlabel}}" wx:key="this" wx:for-item="item">
+				<view bindtap="labelcheck" data-label="{{item.content}}" class="label" wx:if="{{item.content==nowlabel}}" style="border-bottom:5rpx solid red;"> {{item.content}}</view>
+					<view bindtap="labelcheck" data-label="{{item.content}}" class="label" wx:else>{{item.content}}</view>
+				</view>
+			</scroll-view>
+		</view>
+		<!-- 具体消息 -->
+		<block wx:if="{{sendrange=='ourschool'}}">
+		<view class="bottom" wx:if="{{message_school[labelindex].content==null}}">加载中...</view>
+			<block  wx:for="{{message_school[labelindex].content}}" wx:key="this" wx:for-item="item">
+		<include src="cardtemplate.wxml"/>
+		</block>
+		<block wx:if="{{message_school[labelindex].bottom==0}}"><view class="bottom">加载中...</view></block>
+			<block wx:if="{{message_school[labelindex].bottom==1}}"><view class="bottom">已经到底了哦~~~</view></block>
+		</block>
+		<block wx:else>
+			<view class="bottom" wx:if="{{message_world[labelindex].content==null}}">加载中...</view>
+			<block  wx:for="{{message_world[labelindex].content}}" wx:key="this" wx:for-item="item">
+		<include src="cardtemplate.wxml"/>
+
+	
+		</block>
+			<block wx:if="{{message_world[labelindex].bottom==0}}"><view class="bottom">加载中...</view></block>
+			<block wx:if="{{message_world[labelindex].bottom==1}}"><view class="bottom">已经到底了哦~~~</view></block>
+		</block>
+	</scroll-view>
+
+		<!--  -->
+		<form bindsubmit="sendcomment">
+		<view id="textareainput" animation="{{animation}}" class="inputtextview1" hidden="{{hiddeninput}}"   >
+		
+		<textarea auto-height focus="{{autofocus}}"  adjust-position="{{false}}" show-confirm-bar="{{false}}"
+		bindfocus="textareachange" bindblur="closeinput" fixed="{{true}}" 
+		 class="textareainput" placeholder='说点什么吧...' cursor-spacing="15" bindinput='textareainput'>
+		</textarea>
+		<button formType="submit" class="sendbutton"  >发送</button>
+		
+	</view>
+	</form>
+	<!-- <view class="chooseschool" >
+		<view class="school_card">
+			<view class="school_name"></view>
+			<view class="grade"></view>
+		</view>
+	</view> -->
+</view>
